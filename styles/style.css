@@ -7,8 +7,7 @@
 body {
   width: 1100px;
   margin: 0 auto;
-  font-family: 'Raleway', Arial;
-  /* Убрал sans-serif, добавил Arial как стандартную заглушку */
+  font-family: 'Raleway', sans-serif;
   background-color: #fff;
   color: #000;
   -webkit-font-smoothing: antialiased;
@@ -39,24 +38,31 @@ img {
   height: auto;
 }
 
+/* HEADER & FOOTER MENU DOTS */
+.header__menu-list,
+.footer__menu-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.header__menu-item:not(:last-child)::after,
+.footer__menu-list li:not(:last-child)::after {
+  content: '•';
+  margin: 0 8px;
+}
+
+.header__menu-link_active,
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
 /* HEADER */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   padding: 92px 50px;
-}
-
-.header__menu-list {
-  display: flex;
-  gap: 32px;
-  list-style: circle;
-  margin-left: 20px;
-}
-
-.header__menu-item_no-bullet {
-  list-style: none;
-  margin-left: -20px;
 }
 
 .header__logo-image {
@@ -68,6 +74,8 @@ img {
   font-size: 18px;
   line-height: 1.4;
   justify-self: end;
+  text-align: left;
+  /* Контакты выровнены по левому краю внутри своего блока */
 }
 
 /* COVER */
@@ -95,11 +103,13 @@ img {
   flex-direction: column;
   gap: 20px;
   color: #fff;
-  font-size: 100px;
+  font-size: 140px;
+  /* Увеличили размер */
   font-weight: 700;
-  line-height: 1;
+  line-height: 0.8;
   z-index: 1;
-  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  /* Добавили интервал между буквами */
 }
 
 .aligned-text {
@@ -117,7 +127,8 @@ img {
 .cover__description {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  /* Центрируем описание и кнопку */
   gap: 78px;
   z-index: 1;
   color: #fff;
@@ -126,7 +137,8 @@ img {
 .cover__description-text {
   font-size: 22px;
   text-transform: uppercase;
-  word-spacing: 18px;
+  letter-spacing: 2px;
+  /* Добавили интервал */
 }
 
 .bet-button {
@@ -134,7 +146,7 @@ img {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: 'Raleway', Arial;
+  font-family: inherit;
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
@@ -162,11 +174,6 @@ img {
 .lots__card-list-item {
   width: 334px;
   height: 450px;
-}
-
-.card-link {
-  display: block;
-  height: 100%;
 }
 
 .card {
@@ -250,10 +257,6 @@ img {
   margin-bottom: 25px;
 }
 
-.about__text p:last-child {
-  margin-bottom: 0;
-}
-
 /* FOOTER */
 .footer {
   display: grid;
@@ -262,12 +265,12 @@ img {
   padding: 180px 50px 90px;
 }
 
-.footer__menu-list {
-  list-style: none;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.footer__address {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.4;
+  justify-self: start;
+  /* Выравнивание по левому краю в футере */
 }
 
 .footer__social-list {
@@ -277,7 +280,18 @@ img {
   list-style: none;
 }
 
-.footer__social-icon {
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  /* Круглый фон */
+}
+
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
 }
