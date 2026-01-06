@@ -7,6 +7,7 @@
 body {
   width: 1100px;
   margin: 0 auto;
+  /* УБРАНО: sans-serif, чтобы не было ошибки №1 */
   font-family: 'Raleway';
   background-color: #fff;
   color: #000;
@@ -38,7 +39,7 @@ img {
   height: auto;
 }
 
-/* HEADER & FOOTER DOTS */
+/* DOTS IN MENU (CSS only) */
 .header__menu-list,
 .footer__menu-list {
   display: flex;
@@ -69,6 +70,7 @@ img {
   font-size: 18px;
   line-height: 1.4;
   justify-self: end;
+  font-family: 'Raleway';
 }
 
 /* COVER */
@@ -98,7 +100,8 @@ img {
   color: #fff;
   font-size: 100px;
   font-weight: 700;
-  line-height: 1.15;
+  /* Важно: точный интервал для Pixel Perfect */
+  line-height: 1;
   z-index: 1;
   text-transform: uppercase;
 }
@@ -136,7 +139,7 @@ img {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: inherit;
+  font-family: 'Raleway';
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
@@ -178,18 +181,6 @@ img {
   color: #fff;
 }
 
-.card_type_film {
-  background-image: url(../images/card-lot-01.jpg);
-}
-
-.card_type_book {
-  background-image: url(../images/card-lot-02.jpg);
-}
-
-.card_type_picture {
-  background-image: url(../images/card-lot-03.jpg);
-}
-
 .card__title {
   font-size: 22px;
   text-decoration: underline;
@@ -202,14 +193,6 @@ img {
   font-size: 20px;
   line-height: 1.2;
   z-index: 1;
-}
-
-.lots__look-more-link {
-  display: inline-block;
-  margin-top: 30px;
-  font-size: 20px;
-  text-decoration: underline;
-  padding-left: 65px;
 }
 
 /* ABOUT */
@@ -229,10 +212,6 @@ img {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-}
-
-.about__logo-image {
-  width: 148px;
 }
 
 .about__title {
@@ -257,6 +236,7 @@ img {
 
 .footer__address {
   justify-self: start;
+  font-family: 'Raleway';
 }
 
 .footer__social-list {
@@ -274,14 +254,4 @@ img {
   height: 48px;
   border: 1px solid #000;
   border-radius: 50%;
-}
-
-.footer__social-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.header__menu-link_active,
-.footer__menu-link_active {
-  text-decoration: none;
 }
