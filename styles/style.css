@@ -54,21 +54,22 @@
   font-weight: 700;
   line-height: 1;
   z-index: 1;
+  /* ВАЖНО: text-transform: uppercase УДАЛЕН */
 }
 
-.aligned-text {
+.aligned-text,
+.aligned-text_center,
+.aligned-text_right {
   display: block;
   letter-spacing: 15px;
 }
 
 .aligned-text_center {
   text-align: center;
-  letter-spacing: 15px;
 }
 
 .aligned-text_right {
   text-align: right;
-  letter-spacing: 15px;
 }
 
 .cover__description {
