@@ -7,7 +7,7 @@
 body {
   width: 1100px;
   margin: 0 auto;
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   background-color: #fff;
   color: #000;
   -webkit-font-smoothing: antialiased;
@@ -50,13 +50,12 @@ img {
   display: flex;
   gap: 32px;
   list-style: circle;
-  margin: 0;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .header__menu-item_no-bullet {
   list-style: none;
-  padding-left: 0;
+  margin-left: -20px;
 }
 
 .header__logo-image {
@@ -134,7 +133,7 @@ img {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: 'Raleway';
+  font-family: inherit;
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
@@ -149,6 +148,8 @@ img {
   font-size: 40px;
   text-transform: uppercase;
   margin-bottom: 27px;
+  padding-left: 65px;
+  /* Точный отступ из макета */
 }
 
 .lots__card-list {
@@ -160,7 +161,8 @@ img {
 
 .lots__card-list-item {
   width: 334px;
-  min-height: 450px;
+  height: 450px;
+  /* Фиксируем высоту */
 }
 
 .card-link {
@@ -211,6 +213,8 @@ img {
   margin-top: 30px;
   font-size: 20px;
   text-decoration: underline;
+  padding-left: 65px;
+  /* Совмещаем с заголовком */
 }
 
 /* ABOUT */
@@ -242,13 +246,14 @@ img {
   margin: 100px 0 40px;
 }
 
-.about__text p:first-child {
-  margin-bottom: 25px;
-}
-
 .about__text p {
   font-size: 20px;
   line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.about__text p:last-child {
+  margin-bottom: 0;
 }
 
 /* FOOTER */
