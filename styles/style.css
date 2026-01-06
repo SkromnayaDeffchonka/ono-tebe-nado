@@ -32,6 +32,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* HEADER */
 .header {
   display: grid;
@@ -87,25 +93,26 @@ a {
   flex-direction: column;
   gap: 20px;
   color: #fff;
-  font-size: 100px;
+  font-size: 150px;
   font-weight: 700;
   line-height: 1;
   z-index: 1;
-  text-transform: uppercase;
+  /* text-transform: uppercase; - Убрано, чтобы соответствовать макету */
 }
 
 .aligned-text {
   display: block;
-  letter-spacing: 0.3em;
+  letter-spacing: 15px;
 }
 
 .aligned-text_center {
   text-align: center;
-  margin-left: -0.3em;
+  letter-spacing: 15px;
 }
 
 .aligned-text_right {
   text-align: right;
+  letter-spacing: 15px;
 }
 
 .cover__description {
@@ -121,6 +128,7 @@ a {
   font-size: 22px;
   text-transform: uppercase;
   word-spacing: 18px;
+  letter-spacing: 2px;
 }
 
 .bet-button {
@@ -128,7 +136,7 @@ a {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: inherit;
+  font-family: 'Raleway';
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
@@ -250,6 +258,14 @@ a {
 .footer__menu-list {
   list-style: none;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer__menu-list li:not(:last-child)::after {
+  content: '•';
+  margin: 0 8px;
 }
 
 .footer__social-list {
@@ -259,7 +275,27 @@ a {
   list-style: none;
 }
 
-.footer__social-icon {
+.footer__social-link {
+  display: inline-block;
   width: 48px;
   height: 48px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Адрес в футере */
+.footer .address {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.4;
+  font-family: 'Raleway';
+  text-align: left;
 }
