@@ -7,7 +7,7 @@
 body {
   width: 1100px;
   margin: 0 auto;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
   background-color: #fff;
   color: #000;
   -webkit-font-smoothing: antialiased;
@@ -98,7 +98,6 @@ img {
   font-size: 100px;
   font-weight: 700;
   line-height: 1;
-  /* Поправил на 1 для точности */
   z-index: 1;
   text-transform: uppercase;
 }
@@ -135,7 +134,7 @@ img {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
