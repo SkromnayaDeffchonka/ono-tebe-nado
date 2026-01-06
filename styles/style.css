@@ -7,7 +7,7 @@
 body {
   width: 1100px;
   margin: 0 auto;
-  font-family: 'Raleway'; /* Убрал sans-serif, оставляем только Raleway */
+  font-family: 'Raleway', sans-serif;
   background-color: #fff;
   color: #000;
 }
@@ -100,11 +100,17 @@ img {
   z-index: 1;
 }
 
+.aligned-text {
+  display: block;
+}
+
 .aligned-text_center {
+  display: block;
   text-align: center;
 }
 
 .aligned-text_right {
+  display: block;
   text-align: right;
 }
 
@@ -128,13 +134,13 @@ img {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: 'Raleway';
+  font-family: inherit;
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-/* --- ЛОТЫ (ФИКС ОТСТУПОВ) --- */
+/* --- ЛОТЫ --- */
 .lots {
   padding: 180px 50px 0;
 }
@@ -147,14 +153,20 @@ img {
 
 .lots__card-list {
   display: flex;
-  justify-content: space-between; /* Равномерное распределение */
+  justify-content: space-between;
   gap: 25px;
   list-style: none;
 }
 
 .lots__card-list-item {
-  width: 334px;
+  flex-basis: 334px;
   min-height: 450px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
 }
 
 .card {
@@ -169,9 +181,18 @@ img {
   color: #fff;
 }
 
-.card_type_film { background-image: url(../images/card-lot-01.jpg); }
-.card_type_book { background-image: url(../images/card-lot-02.jpg); }
-.card_type_picture { background-image: url(../images/card-lot-03.jpg); }
+/* ТЕ САМЫЕ СТРОЧКИ, КОТОРЫЕ Я ИСПРАВИЛ */
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
 
 .card__title {
   font-size: 22px;
@@ -222,13 +243,13 @@ img {
   margin: 100px 0 40px;
 }
 
+.about__text p:first-child {
+  margin-bottom: 25px;
+}
+
 .about__text p {
   font-size: 20px;
   line-height: 1.2;
-}
-
-.about__text p:first-child {
-  margin-bottom: 25px;
 }
 
 /* --- ФУТЕР --- */
