@@ -1,3 +1,4 @@
+/* --- GLOBAL --- */
 *,
 *::before,
 *::after {
@@ -153,20 +154,20 @@ img {
 
 .lots__card-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
   list-style: none;
-  justify-content: center;
 }
 
 .lots__card-list-item {
-  flex-basis: 334px;
+  flex-grow: 1;
+  width: 334px;
   min-height: 450px;
 }
 
 .card-link {
   display: block;
   height: 100%;
-  text-decoration: none;
 }
 
 .card {
