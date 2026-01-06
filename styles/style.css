@@ -10,11 +10,19 @@
   display: flex;
   gap: 32px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.header__menu-item:not(:last-child)::after {
-  content: '•';
+.header__menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.separator {
   margin-left: 32px;
+  color: currentColor;
 }
 
 .header__logo-image {
@@ -54,7 +62,7 @@
   font-weight: 700;
   line-height: 1;
   z-index: 1;
-  /* ВАЖНО: text-transform: uppercase УДАЛЕН */
+  /* text-transform: uppercase — УДАЛЕНО */
 }
 
 .aligned-text,
@@ -231,11 +239,8 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-
-.footer__menu-list li:not(:last-child)::after {
-  content: '•';
-  margin: 0 8px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__social-list {
@@ -243,6 +248,8 @@
   gap: 16px;
   justify-content: flex-end;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__social-link {
