@@ -7,8 +7,7 @@
 body {
   width: 1100px;
   margin: 0 auto;
-  /* УБРАНО: sans-serif, чтобы не было ошибки №1 */
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
   background-color: #fff;
   color: #000;
   -webkit-font-smoothing: antialiased;
@@ -39,18 +38,26 @@ img {
   height: auto;
 }
 
-/* DOTS IN MENU (CSS only) */
+.address {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* DOTS IN MENU */
 .header__menu-list,
 .footer__menu-list {
   display: flex;
   list-style: none;
   align-items: center;
+  gap: 8px;
+  /* Используем gap для точности */
 }
 
 .header__menu-item:not(:last-child)::after,
 .footer__menu-list li:not(:last-child)::after {
   content: '•';
-  margin: 0 8px;
+  margin-left: 8px;
 }
 
 /* HEADER */
@@ -66,11 +73,7 @@ img {
 }
 
 .header__address {
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1.4;
   justify-self: end;
-  font-family: 'Raleway';
 }
 
 /* COVER */
@@ -100,7 +103,6 @@ img {
   color: #fff;
   font-size: 100px;
   font-weight: 700;
-  /* Важно: точный интервал для Pixel Perfect */
   line-height: 1;
   z-index: 1;
   text-transform: uppercase;
@@ -113,16 +115,25 @@ img {
 
 .aligned-text_center {
   text-align: center;
+  letter-spacing: 0.3em;
+  margin-left: 0.15em;
+  /* Компенсация для центрирования */
 }
 
 .aligned-text_right {
   text-align: right;
 }
 
+/* Убираем лишний спейсинг у последней буквы, чтобы текст не уезжал */
+.letter-spacing-none {
+  letter-spacing: 0;
+}
+
 .cover__description {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  /* Описание обычно справа или по центру */
   gap: 78px;
   z-index: 1;
   color: #fff;
@@ -139,7 +150,7 @@ img {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: 'Raleway';
+  font-family: inherit;
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
@@ -165,8 +176,14 @@ img {
 }
 
 .lots__card-list-item {
+  flex-grow: 1;
   width: 334px;
   min-height: 450px;
+}
+
+.card-link {
+  display: block;
+  height: 100%;
 }
 
 .card {
@@ -176,9 +193,22 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 50px 40px;
+  color: #fff;
   background-size: cover;
   background-position: center;
-  color: #fff;
+}
+
+/* Фон для разных типов карточек */
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .card__title {
@@ -195,12 +225,27 @@ img {
   z-index: 1;
 }
 
+.lots__look-more-link {
+  display: block;
+  font-size: 20px;
+  margin-top: 30px;
+  padding-left: 65px;
+  text-decoration: underline;
+}
+
 /* ABOUT */
 .about {
   display: grid;
   grid-template-columns: 334px 1fr;
   padding: 180px 50px;
   gap: 30px;
+}
+
+.about__column_type_logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 35px;
 }
 
 .about__logo {
@@ -211,7 +256,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+}
+
+.about__logo-image {
+  width: 148px;
 }
 
 .about__title {
@@ -236,7 +284,6 @@ img {
 
 .footer__address {
   justify-self: start;
-  font-family: 'Raleway';
 }
 
 .footer__social-list {
