@@ -7,8 +7,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway'; 
-  min-width: 1100px; 
+  font-family: 'Raleway', sans-serif;
+  min-width: 1100px;
   background-color: #fff;
   color: #000;
 }

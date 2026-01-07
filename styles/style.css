@@ -1,4 +1,4 @@
-/* Шаг 4. Шапка */
+/* Шапка */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -16,8 +16,13 @@
   list-style: none;
 }
 
+.header__link_active {
+  border-bottom: 1px solid currentColor;
+}
+
 .header__logo {
   display: block;
+  width: 148px;
 }
 
 .header__address {
@@ -27,7 +32,7 @@
   justify-self: end;
 }
 
-/* Шаг 5. Обложка */
+/* Обложка */
 .cover {
   position: relative;
   background-image: url("../images/cover.jpg");
@@ -53,7 +58,8 @@
   color: #fff;
   font-size: 100px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.15;
+  text-transform: uppercase;
 }
 
 .aligned-text {
@@ -84,6 +90,8 @@
   color: #fff;
   text-transform: uppercase;
   word-spacing: 18px;
+  font-size: 22px;
+  max-width: 550px;
 }
 
 .bet-button {
@@ -94,9 +102,10 @@
   font-size: 22px;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: inherit;
 }
 
-/* Шаг 6. Лоты */
+/* Лоты */
 .lots {
   padding: 179px 50px;
 }
@@ -104,6 +113,8 @@
 .lots__heading {
   font-size: 40px;
   margin-bottom: 27px;
+  font-weight: 700;
+  padding-left: 65px;
 }
 
 .lots__card-list {
@@ -152,6 +163,7 @@
   color: #fff;
   text-decoration: underline;
   font-size: 22px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -160,9 +172,18 @@
   z-index: 1;
   color: #fff;
   font-size: 20px;
+  line-height: 1.2;
 }
 
-/* Шаг 7. Об аукционе */
+.lots__look-more-link {
+  display: block;
+  margin-top: 30px;
+  font-size: 20px;
+  padding-left: 65px;
+  text-decoration: underline;
+}
+
+/* Об аукционе */
 .about {
   display: grid;
   grid-template-columns: calc((100% - 50px) / 3) 1fr;
@@ -184,13 +205,20 @@
 .about__title {
   font-size: 40px;
   margin: 100px 0 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about__text {
+  font-size: 20px;
+  line-height: 1.2;
 }
 
 .about__text p:first-child {
   margin-bottom: 24px;
 }
 
-/* Шаг 8. Подвал */
+/* Подвал */
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -202,8 +230,17 @@
   text-align: center;
 }
 
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
 .footer__social-list {
   display: flex;
   justify-content: flex-end;
   gap: 16px;
+}
+
+.footer__social-icon {
+  width: 48px;
+  height: 48px;
 }
