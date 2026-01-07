@@ -6,6 +6,7 @@
 
 html {
   font-family: 'Raleway';
+  /* Убрали sans-serif */
 }
 
 body {
@@ -24,8 +25,7 @@ h6,
 p,
 ul,
 ol,
-li,
-blockquote {
+li {
   margin: 0;
   padding: 0;
 }
