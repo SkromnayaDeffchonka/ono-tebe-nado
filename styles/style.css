@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Raleway';
+}
+
 body {
   width: 1100px;
   margin: 0 auto;
@@ -77,11 +87,16 @@ body {
 
 .aligned-text {
   letter-spacing: 0.3em;
-  margin-right: -0.3em; /* Компенсация хвоста для центрирования */
+  margin-right: -0.3em;
 }
 
-.aligned-text_center { text-align: center; }
-.aligned-text_right { text-align: right; }
+.aligned-text_center {
+  text-align: center;
+}
+
+.aligned-text_right {
+  text-align: right;
+}
 
 .cover__description {
   position: relative;
@@ -141,9 +156,17 @@ body {
   color: #fff;
 }
 
-.card_type_film { background-image: url(../images/card-lot-01.jpg); }
-.card_type_book { background-image: url(../images/card-lot-02.jpg); }
-.card_type_picture { background-image: url(../images/card-lot-03.jpg); }
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
+}
+
+.card_type_book {
+  background-image: url(../images/card-lot-02.jpg);
+}
+
+.card_type_picture {
+  background-image: url(../images/card-lot-03.jpg);
+}
 
 .card__title {
   font-size: 22px;
@@ -171,7 +194,7 @@ body {
 /* ABOUT */
 .about {
   display: grid;
-  grid-template-columns: 334px 1fr; /* Фиксируем колонку под размер карточки */
+  grid-template-columns: 334px 1fr;
   padding: 180px 50px;
   gap: 30px;
 }
