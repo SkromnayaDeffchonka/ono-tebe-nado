@@ -1,19 +1,19 @@
-/* ШАГ 4. ШАПКА */
+/* Шаг 4. Шапка */
 .header {
   display: grid;
-  grid-template-columns: 1fr min-content 1fr; /* [cite: 101] */
-  align-items: center; /* [cite: 103] */
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
   padding: 92px 50px;
 }
 
 .header__links-list {
-  display: flex; /* [cite: 114] */
+  display: flex;
   gap: 32px;
-  list-style: circle; /* [cite: 115] */
+  list-style: circle;
 }
 
 .header__links-list-item_no-bullit {
-  list-style: none; /* [cite: 140] */
+  list-style: none;
 }
 
 .header__logo {
@@ -21,16 +21,16 @@
 }
 
 .header__address {
-  justify-self: end; /* [cite: 127] */
-  max-width: 240px; /* [cite: 126] */
   font-style: normal;
   line-height: 1.5;
+  max-width: 240px;
+  justify-self: end;
 }
 
-/* ШАГ 5. ОБЛОЖКА */
+/* Шаг 5. Обложка */
 .cover {
-  position: relative; /* [cite: 159] */
-  background-image: url('../images/cover.jpg');
+  position: relative;
+  background-image: url("../images/cover.jpg");
   background-size: cover;
   background-position: center;
   padding: 165px 50px 50px;
@@ -42,7 +42,7 @@
 
 .overlay {
   position: absolute;
-  inset: 0; /* [cite: 166] */
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
@@ -56,10 +56,20 @@
   line-height: 1;
 }
 
-/* Стили выравнивания слов [cite: 191] */
-.aligned-text { display: block; text-align: left; }
-.aligned-text_center { display: block; text-align: center; }
-.aligned-text_right { display: block; text-align: right; }
+.aligned-text {
+  display: block;
+  text-align: left;
+}
+
+.aligned-text_center {
+  display: block;
+  text-align: center;
+}
+
+.aligned-text_right {
+  display: block;
+  text-align: right;
+}
 
 .cover__description {
   position: relative;
@@ -68,24 +78,25 @@
   align-items: center;
   justify-content: flex-end;
   gap: 78px;
-  color: #fff;
 }
 
 .cover__description-text {
-  word-spacing: 18px; /* Нестандартное расстояние [cite: 177] */
+  color: #fff;
   text-transform: uppercase;
+  word-spacing: 18px;
 }
 
 .bet-button {
-  border: 1px solid #fff;
   background: transparent;
+  border: 1px solid #fff;
   color: #fff;
   padding: 12px 32px;
-  text-transform: uppercase;
   font-size: 22px;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-/* ШАГ 6. ЛОТЫ */
+/* Шаг 6. Лоты */
 .lots {
   padding: 179px 50px;
 }
@@ -96,15 +107,15 @@
 }
 
 .lots__card-list {
-  display: flex; /* [cite: 202] */
-  flex-wrap: wrap; /* [cite: 204] */
+  display: flex;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
 .lots__card-list-item {
   flex-grow: 1;
-  width: calc((100% - 50px) / 3); /* Три в ряд */
-  min-height: 450px; /* [cite: 200] */
+  width: calc((100% - 50px) / 3);
+  min-height: 450px;
 }
 
 .card-link {
@@ -113,44 +124,48 @@
 }
 
 .card {
-  position: relative; /* [cite: 207] */
+  position: relative;
   height: 100%;
   padding: 50px;
   display: flex;
-  flex-direction: column; /* [cite: 203] */
+  flex-direction: column;
   justify-content: space-between;
   background-size: cover;
   background-position: center;
-  color: #fff;
 }
 
-.card_type_film { background-image: url('../images/card-lot-01.jpg'); }
-.card_type_book { background-image: url('../images/card-lot-02.jpg'); }
-.card_type_picture { background-image: url('../images/card-lot-03.jpg'); }
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
 
 .card__title {
   position: relative;
   z-index: 1;
+  color: #fff;
   text-decoration: underline;
   font-size: 22px;
+  text-transform: uppercase;
 }
 
 .card__text {
   position: relative;
   z-index: 1;
+  color: #fff;
   font-size: 20px;
 }
 
-.lots__look-more-link {
-  display: block;
-  margin-top: 30px;
-  text-align: center;
-}
-
-/* ШАГ 7. ОБ АУКЦИОНЕ */
+/* Шаг 7. Об аукционе */
 .about {
   display: grid;
-  grid-template-columns: calc((100% - 50px) / 3) 1fr; /* Левая колонка как карточка [cite: 224] */
+  grid-template-columns: calc((100% - 50px) / 3) 1fr;
   gap: 25px;
   padding: 0 50px 180px;
 }
@@ -159,36 +174,36 @@
   width: 240px;
   height: 240px;
   background-color: #000;
-  border-radius: 50%; /* Круглый [cite: 226] */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center; /* Центрирование лого [cite: 227] */
+  align-items: center;
   margin: 0 auto;
 }
 
 .about__title {
   font-size: 40px;
-  margin: 100px 0 27px; /* Выравнивание по центру круга [cite: 230] */
+  margin: 100px 0 27px;
 }
 
 .about__text p:first-child {
-  margin-bottom: 24px; /* Отступ только первому абзацу [cite: 229] */
+  margin-bottom: 24px;
 }
 
-/* ШАГ 8. ПОДВАЛ */
+/* Шаг 8. Подвал */
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* [cite: 243] */
-  padding: 100px 50px;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: start;
+  padding: 100px 50px;
 }
 
 .footer__menu-list {
-  text-align: center; /* Центрирование ссылок [cite: 247] */
+  text-align: center;
 }
 
 .footer__social-list {
   display: flex;
-  justify-content: flex-end; /* Правая колонка [cite: 248] */
+  justify-content: flex-end;
   gap: 16px;
 }
