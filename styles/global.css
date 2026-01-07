@@ -6,6 +6,7 @@
 
 html {
   font-family: 'Raleway';
+  /* Только Raleway, никакого sans-serif */
 }
 
 body {
@@ -29,8 +30,7 @@ li {
   padding: 0;
 }
 
-ul,
-ol {
+ul {
   list-style: none;
 }
 

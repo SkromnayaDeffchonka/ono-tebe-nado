@@ -4,6 +4,7 @@ body {
   font-family: 'Raleway';
   color: #000;
   background-color: #fff;
+  line-height: 1.2;
 }
 
 /* HEADER */
@@ -17,11 +18,11 @@ body {
 .header__menu-list {
   display: flex;
   gap: 32px;
-  list-style: none;
 }
 
 .header__menu-item {
   position: relative;
+  text-transform: lowercase;
 }
 
 .header__menu-item:not(:last-child)::after {
@@ -75,18 +76,12 @@ body {
 }
 
 .aligned-text {
-  display: block;
   letter-spacing: 0.3em;
-  margin-right: -0.3em;
+  margin-right: -0.3em; /* Компенсация хвоста для центрирования */
 }
 
-.aligned-text_center {
-  text-align: center;
-}
-
-.aligned-text_right {
-  text-align: right;
-}
+.aligned-text_center { text-align: center; }
+.aligned-text_right { text-align: right; }
 
 .cover__description {
   position: relative;
@@ -105,13 +100,11 @@ body {
 }
 
 .bet-button {
-  background: transparent;
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
   font-size: 22px;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 /* LOTS */
@@ -123,12 +116,12 @@ body {
   font-size: 40px;
   margin-bottom: 27px;
   padding-left: 65px;
+  text-transform: uppercase;
 }
 
 .lots__card-list {
   display: flex;
   gap: 25px;
-  list-style: none;
 }
 
 .lots__card-list-item {
@@ -148,17 +141,9 @@ body {
   color: #fff;
 }
 
-.card_type_film {
-  background-image: url(../images/card-lot-01.jpg);
-}
-
-.card_type_book {
-  background-image: url(../images/card-lot-02.jpg);
-}
-
-.card_type_picture {
-  background-image: url(../images/card-lot-03.jpg);
-}
+.card_type_film { background-image: url(../images/card-lot-01.jpg); }
+.card_type_book { background-image: url(../images/card-lot-02.jpg); }
+.card_type_picture { background-image: url(../images/card-lot-03.jpg); }
 
 .card__title {
   font-size: 22px;
@@ -176,7 +161,7 @@ body {
 }
 
 .lots__look-more-link {
-  display: inline-block;
+  display: block;
   margin-top: 30px;
   padding-left: 65px;
   font-size: 20px;
@@ -186,7 +171,7 @@ body {
 /* ABOUT */
 .about {
   display: grid;
-  grid-template-columns: 334px 1fr;
+  grid-template-columns: 334px 1fr; /* Фиксируем колонку под размер карточки */
   padding: 180px 50px;
   gap: 30px;
 }
@@ -234,14 +219,12 @@ body {
 .footer__menu-list {
   display: flex;
   gap: 32px;
-  list-style: none;
 }
 
 .footer__social-list {
   display: flex;
   gap: 16px;
   justify-self: end;
-  list-style: none;
 }
 
 .footer__social-link {
