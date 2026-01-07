@@ -1,4 +1,4 @@
-/* --- ШАПКА --- */
+/* Шапка */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -32,7 +32,7 @@
   justify-self: end;
 }
 
-/* --- ОБЛОЖКА --- */
+/* Обложка */
 .cover {
   position: relative;
   background-image: url("../images/cover.jpg");
@@ -76,7 +76,7 @@
 .aligned-text_right {
   display: block;
   text-align: right;
-  margin-right: -0.3em; /* Компенсация отступа после последней буквы */
+  margin-right: -0.3em;
 }
 
 .cover__description {
@@ -106,7 +106,7 @@
   font-family: inherit;
 }
 
-/* --- ЛОТЫ --- */
+/* Лоты */
 .lots {
   padding: 179px 50px;
 }
@@ -170,13 +170,14 @@
   line-height: 1.2;
 }
 
-/* --- ОБ АУКЦИОНЕ (КОЛОНКИ ПО СЕТКЕ) --- */
+/* Об аукционе — ИСПРАВЛЕННАЯ СЕТКА */
 .about {
   display: grid;
-  /* Ширина левой колонки такая же, как у лота */
-  grid-template-columns: calc((100% - 50px) / 3) 1fr;
+  /* Левая колонка = 1 карточка лота, правая = 2 карточки лота + гэпы */
+  grid-template-columns: calc((100% - 50px) / 3) 2fr;
   gap: 25px;
   padding: 0 50px 180px;
+  align-items: start;
 }
 
 .about__logo {
@@ -210,7 +211,7 @@
   margin-bottom: 24px;
 }
 
-/* --- ПОДВАЛ --- */
+/* Подвал */
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
