@@ -1,7 +1,6 @@
 /* Общие настройки для всего проекта */
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -11,13 +10,10 @@ html {
 }
 
 body {
-  min-width: 1100px;
-  /* Из макета */
+  min-width: 320px;
   max-width: 1440px;
-  /* Из макета */
   margin: 0 auto;
-  /* Центрирование контента */
-  font-family: Raleway, Arial, sans-serif;
+  font-family: Raleway, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.2;
@@ -67,5 +63,4 @@ button {
 .page {
   width: 100%;
   margin: 0 auto;
-  padding: 0;
 }
