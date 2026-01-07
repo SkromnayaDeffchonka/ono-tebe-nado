@@ -91,7 +91,6 @@
   text-transform: uppercase;
   word-spacing: 18px;
   font-size: 22px;
-  max-width: 550px;
 }
 
 .bet-button {
@@ -114,7 +113,7 @@
   font-size: 40px;
   margin-bottom: 27px;
   font-weight: 700;
-  padding-left: 65px;
+  text-transform: uppercase;
 }
 
 .lots__card-list {
@@ -179,13 +178,13 @@
   display: block;
   margin-top: 30px;
   font-size: 20px;
-  padding-left: 65px;
   text-decoration: underline;
 }
 
 /* Об аукционе */
 .about {
   display: grid;
+  /* Левая колонка равна ширине карточки лота */
   grid-template-columns: calc((100% - 50px) / 3) 1fr;
   gap: 25px;
   padding: 0 50px 180px;
@@ -228,10 +227,6 @@
 
 .footer__menu-list {
   text-align: center;
-}
-
-.footer__menu-link_active {
-  text-decoration: none;
 }
 
 .footer__social-list {
