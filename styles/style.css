@@ -1,93 +1,80 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+/* Шаг 3: Глобальная стилизация */
 
-html {
-  font-family: 'Raleway';
-}
-
-body {
-  width: 1100px;
-  margin: 0 auto;
-  font-family: 'Raleway';
-  color: #000;
-  background-color: #fff;
-  line-height: 1.2;
-}
-
-/* HEADER */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 92px 50px;
+  padding: 20px 40px;
+  gap: 20px;
 }
 
-.header__menu-list {
+.header__menu {
+  justify-self: start;
+}
+
+.header__links-list {
   display: flex;
-  gap: 32px;
+  gap: 20px;
+  list-style: circle;
 }
 
-.header__menu-item {
-  position: relative;
-  text-transform: lowercase;
+.header__links-list-item_no-bullit {
+  list-style: none;
 }
 
-.header__menu-item:not(:last-child)::after {
-  content: "•";
-  position: absolute;
-  right: -20px;
+.header__link {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #000;
+  text-decoration: underline;
+}
+
+.header__link_active {
+  text-decoration: none;
+}
+
+.header__logo {
+  justify-self: center;
 }
 
 .header__logo-image {
-  width: 148px;
+  width: 80px;
+  height: 80px;
 }
 
 .header__address {
   justify-self: end;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1.2;
+  max-width: 200px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #000;
+  text-align: right;
 }
 
-/* COVER */
+.header__address a {
+  color: #000;
+}
+
+/* Шаг 5: Стилизация обложки */
+
 .cover {
-  position: relative;
-  background-image: url(../images/cover.jpg);
+  background-image: url('../images/cover.jpg');
   background-size: cover;
   background-position: center;
-  padding: 165px 50px 50px;
-  min-height: 757px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
+  padding: 100px 40px;
+  text-align: center;
 }
 
 .cover__title {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  color: #fff;
-  font-size: 100px;
+  font-size: 8rem;
   font-weight: 700;
-  line-height: 1;
-  text-transform: uppercase;
-  z-index: 1;
+  color: #fff;
+  letter-spacing: -0.05em;
+  margin-bottom: 40px;
 }
 
-.aligned-text {
-  letter-spacing: 0.3em;
-  margin-right: -0.3em;
+.cover__title span {
+  display: block;
 }
 
 .aligned-text_center {
@@ -99,115 +86,123 @@ body {
 }
 
 .cover__description {
-  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  gap: 78px;
-  z-index: 1;
+  gap: 40px;
 }
 
 .cover__description-text {
+  font-size: 1.8rem;
+  font-weight: 400;
   color: #fff;
-  font-size: 22px;
+  word-spacing: 10px;
   text-transform: uppercase;
-  word-spacing: 18px;
 }
 
 .bet-button {
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 12px 31px;
-  font-size: 22px;
-  text-transform: uppercase;
+  padding: 12px 24px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #000;
+  border: 2px solid #000;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* LOTS */
+.bet-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Шаг 6: Стилизация секции с карточками */
+
 .lots {
-  padding: 180px 50px 0;
+  padding: 60px 40px;
 }
 
 .lots__heading {
-  font-size: 40px;
-  margin-bottom: 27px;
-  padding-left: 65px;
-  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
 }
 
 .lots__card-list {
   display: flex;
-  gap: 25px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .lots__card-list-item {
-  width: 334px;
-  min-height: 450px;
+  width: 300px;
+  min-height: 400px;
 }
 
 .card {
   position: relative;
   height: 100%;
-  padding: 50px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-size: cover;
-  background-position: center;
+  padding: 20px;
   color: #fff;
+  overflow: hidden;
 }
 
 .card_type_film {
-  background-image: url(../images/card-lot-01.jpg);
+  background-image: url('../images/card-lot-01.jpg');
 }
 
 .card_type_book {
-  background-image: url(../images/card-lot-02.jpg);
+  background-image: url('../images/card-lot-02.jpg');
 }
 
 .card_type_picture {
-  background-image: url(../images/card-lot-03.jpg);
+  background-image: url('../images/card-lot-03.jpg');
 }
 
 .card__title {
-  font-size: 22px;
+  font-size: 1.8rem;
   font-weight: 700;
-  text-decoration: underline;
   text-transform: uppercase;
-  z-index: 1;
-  line-height: 1.2;
+  margin-bottom: 20px;
+  line-height: 1.3;
 }
 
 .card__text {
-  font-size: 20px;
-  line-height: 1.2;
-  z-index: 1;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: auto;
 }
 
 .lots__look-more-link {
-  display: block;
-  margin-top: 30px;
-  padding-left: 65px;
-  font-size: 20px;
+  font-size: 1.4rem;
+  color: #000;
   text-decoration: underline;
+  display: inline-block;
+  margin-top: 20px;
 }
 
-/* ABOUT */
+/* Шаг 7: Стилизация секции "Об аукционе" */
+
 .about {
   display: grid;
-  grid-template-columns: 334px 1fr;
-  padding: 180px 50px;
-  gap: 30px;
+  grid-template-columns: 300px 1fr;
+  gap: 60px;
+  padding: 60px 40px;
 }
 
-.about__column_type_logo {
+.about__column_left {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .about__logo {
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   background-color: #000;
   border-radius: 50%;
   display: flex;
@@ -216,46 +211,90 @@ body {
 }
 
 .about__logo-image {
-  width: 148px;
+  width: 100px;
+  height: 100px;
+}
+
+.about__column_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about__title {
-  font-size: 40px;
-  margin: 100px 0 40px;
-  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
 }
 
 .about__text p {
-  font-size: 20px;
-  line-height: 1.2;
-  margin-bottom: 25px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #000;
+  margin-bottom: 20px;
 }
 
-/* FOOTER */
+.about__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Шаг 8: Стилизация подвала */
+
 .footer {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
-  padding: 180px 50px 90px;
+  padding: 40px;
+  gap: 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer__address {
+  justify-self: start;
+  max-width: 200px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.footer__address a {
+  color: #fff;
+}
+
+.footer__menu {
+  justify-self: center;
 }
 
 .footer__menu-list {
   display: flex;
-  gap: 32px;
+  gap: 20px;
+  list-style: none;
+}
+
+.footer__menu-link {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
 }
 
 .footer__social-list {
-  display: flex;
-  gap: 16px;
   justify-self: end;
+  display: flex;
+  gap: 20px;
 }
 
 .footer__social-link {
-  display: flex;
-  width: 48px;
-  height: 48px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
+  display: block;
+}
+
+.footer__social-icon {
+  width: 24px;
+  height: 24px;
 }
