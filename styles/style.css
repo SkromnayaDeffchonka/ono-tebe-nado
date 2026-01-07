@@ -1,4 +1,4 @@
-/* === ПОВТОРЯЮЩИЙСЯ ОВЕРЛЕЙ === */
+/* === ОВЕРЛЕЙ — повторяющийся класс === */
 .overlay {
   position: relative;
 }
@@ -48,8 +48,8 @@
 }
 
 .header__link {
-  color: #000;
   text-decoration: none;
+  color: #000;
   font-size: 16px;
   line-height: 24px;
 }
@@ -75,9 +75,14 @@
   color: #000;
 }
 
+.header__address a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* === COVER === */
 .cover {
-  background-image: url("../images/hero-bg.jpg");
+  background-image: url("../images/cover.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -87,6 +92,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 0 120px;
 }
 
@@ -195,15 +201,15 @@
 }
 
 .card_type_film {
-  background-image: url("../images/lot1.jpg");
+  background-image: url("../images/card-lot-01.jpg");
 }
 
 .card_type_book {
-  background-image: url("../images/lot2.jpg");
+  background-image: url("../images/card-lot-02.jpg");
 }
 
 .card_type_picture {
-  background-image: url("../images/lot3.jpg");
+  background-image: url("../images/card-lot-03.jpg");
 }
 
 .card__title {
@@ -284,14 +290,14 @@
   color: #fff;
 }
 
-.footer address {
+.footer__address {
   font-style: normal;
   font-size: 16px;
   line-height: 24px;
   text-align: left;
 }
 
-.footer address a {
+.footer__address a {
   color: inherit;
   text-decoration: none;
 }
@@ -325,7 +331,6 @@
 }
 
 .footer__social-icon {
-  display: block;
   width: 24px;
   height: 24px;
 }
