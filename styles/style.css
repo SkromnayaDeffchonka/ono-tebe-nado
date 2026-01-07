@@ -32,7 +32,7 @@
   justify-self: end;
 }
 
-/* Обложка */
+/* Обложка — Исправлено letter-spacing */
 .cover {
   position: relative;
   background-image: url("../images/cover.jpg");
@@ -60,6 +60,8 @@
   font-weight: 700;
   line-height: 1.15;
   text-transform: uppercase;
+  /* Добавлен отступ между буквами для Pixel Perfect */
+  letter-spacing: 0.3em; 
 }
 
 .aligned-text {
@@ -75,6 +77,8 @@
 .aligned-text_right {
   display: block;
   text-align: right;
+  /* Убираем лишний отступ у последнего слова, чтобы не вылетало за край */
+  letter-spacing: 0.3em;
 }
 
 .cover__description {
@@ -160,9 +164,10 @@
   line-height: 1.2;
 }
 
-/* Об аукционе (Исправлено центрирование и колонки) */
+/* Об аукционе — Колонки исправлены под сетку лотов */
 .about {
   display: grid;
+  /* Левая колонка строго по ширине карточки, правая — всё остальное */
   grid-template-columns: calc((100% - 50px) / 3) 1fr;
   gap: 25px;
   padding: 0 50px 180px;
@@ -187,6 +192,7 @@
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
+  /* Выравнивание заголовка относительно центра круга */
   margin: 100px 0 27px;
 }
 
