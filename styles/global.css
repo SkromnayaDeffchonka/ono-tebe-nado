@@ -5,13 +5,15 @@
 }
 
 html {
-  font-family: 'Raleway';
+  font-family: 'Raleway', sans-serif;
+  /* Оставляем так, но в основном CSS переопределим */
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -23,7 +25,8 @@ h6,
 p,
 ul,
 ol,
-li {
+li,
+blockquote {
   margin: 0;
   padding: 0;
 }
@@ -36,9 +39,12 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
-  font-family: 'Raleway';
 }
 
 button {
-  font-family: 'Raleway';
+  padding: 0;
+  border: none;
+  font-family: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
