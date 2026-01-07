@@ -123,14 +123,8 @@
 }
 
 .lots__card-list-item {
-  flex-grow: 1;
   width: calc((100% - 50px) / 3);
   min-height: 450px;
-}
-
-.card-link {
-  display: block;
-  height: 100%;
 }
 
 .card {
@@ -144,17 +138,9 @@
   background-position: center;
 }
 
-.card_type_film {
-  background-image: url("../images/card-lot-01.jpg");
-}
-
-.card_type_book {
-  background-image: url("../images/card-lot-02.jpg");
-}
-
-.card_type_picture {
-  background-image: url("../images/card-lot-03.jpg");
-}
+.card_type_film { background-image: url("../images/card-lot-01.jpg"); }
+.card_type_book { background-image: url("../images/card-lot-02.jpg"); }
+.card_type_picture { background-image: url("../images/card-lot-03.jpg"); }
 
 .card__title {
   position: relative;
@@ -174,17 +160,9 @@
   line-height: 1.2;
 }
 
-.lots__look-more-link {
-  display: block;
-  margin-top: 30px;
-  font-size: 20px;
-  text-decoration: underline;
-}
-
-/* Об аукционе */
+/* Об аукционе (Исправлено центрирование и колонки) */
 .about {
   display: grid;
-  /* Левая колонка равна ширине карточки лота */
   grid-template-columns: calc((100% - 50px) / 3) 1fr;
   gap: 25px;
   padding: 0 50px 180px;
@@ -201,11 +179,15 @@
   margin: 0 auto;
 }
 
+.about__logo-image {
+  width: 148px;
+}
+
 .about__title {
   font-size: 40px;
-  margin: 100px 0 27px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 100px 0 27px;
 }
 
 .about__text {
