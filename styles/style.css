@@ -1,5 +1,4 @@
-/* Шаг 3: Глобальная стилизация */
-
+/* === Header === */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -8,23 +7,14 @@
   gap: 20px;
 }
 
-.header__menu {
-  justify-self: start;
-}
-
 .header__links-list {
   display: flex;
   gap: 20px;
   list-style: circle;
 }
 
-.header__links-list-item_no-bullit {
-  list-style: none;
-}
-
 .header__link {
   font-size: 1.4rem;
-  line-height: 1.5;
   color: #000;
   text-decoration: underline;
 }
@@ -33,35 +23,21 @@
   text-decoration: none;
 }
 
-.header__logo {
-  justify-self: center;
-}
-
 .header__logo-image {
   width: 80px;
   height: 80px;
 }
 
 .header__address {
-  justify-self: end;
+  text-align: right;
   max-width: 200px;
   font-size: 1.4rem;
-  line-height: 1.5;
-  color: #000;
-  text-align: right;
 }
 
-.header__address a {
-  color: #000;
-}
-
-/* Шаг 5: Стилизация обложки */
-
+/* === Cover === */
 .cover {
-  background-image: url('../images/cover.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 100px 40px;
+  background: url('../images/cover.jpg') center / cover no-repeat;
+  padding: 100px 40px 120px;
   text-align: center;
 }
 
@@ -94,30 +70,21 @@
 
 .cover__description-text {
   font-size: 1.8rem;
-  font-weight: 400;
   color: #fff;
-  word-spacing: 10px;
   text-transform: uppercase;
+  word-spacing: 10px;
 }
 
 .bet-button {
   padding: 12px 24px;
   font-size: 1.6rem;
-  font-weight: 400;
   color: #000;
-  border: 2px solid #000;
   background: transparent;
+  border: 2px solid #000;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.bet-button:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-/* Шаг 6: Стилизация секции с карточками */
-
+/* === Lots === */
 .lots {
   padding: 60px 40px;
 }
@@ -125,7 +92,6 @@
 .lots__heading {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #000;
   margin-bottom: 40px;
 }
 
@@ -141,27 +107,17 @@
 }
 
 .card {
-  position: relative;
+  padding: 20px;
+  color: #fff;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
-  color: #fff;
-  overflow: hidden;
 }
 
-.card_type_film {
-  background-image: url('../images/card-lot-01.jpg');
-}
-
-.card_type_book {
-  background-image: url('../images/card-lot-02.jpg');
-}
-
-.card_type_picture {
-  background-image: url('../images/card-lot-03.jpg');
-}
+.card_type_film { background: url('../images/card-lot-01.jpg') center / cover; }
+.card_type_book { background: url('../images/card-lot-02.jpg') center / cover; }
+.card_type_picture { background: url('../images/card-lot-03.jpg') center / cover; }
 
 .card__title {
   font-size: 1.8rem;
@@ -174,7 +130,6 @@
 .card__text {
   font-size: 1.4rem;
   line-height: 1.5;
-  margin-top: auto;
 }
 
 .lots__look-more-link {
@@ -182,11 +137,9 @@
   color: #000;
   text-decoration: underline;
   display: inline-block;
-  margin-top: 20px;
 }
 
-/* Шаг 7: Стилизация секции "Об аукционе" */
-
+/* === About === */
 .about {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -203,8 +156,8 @@
 .about__logo {
   width: 200px;
   height: 200px;
-  background-color: #000;
   border-radius: 50%;
+  background: #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,14 +177,12 @@
 .about__title {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #000;
   margin-bottom: 20px;
 }
 
 .about__text p {
   font-size: 1.6rem;
   line-height: 1.5;
-  color: #000;
   margin-bottom: 20px;
 }
 
@@ -239,32 +190,21 @@
   margin-bottom: 0;
 }
 
-/* Шаг 8: Стилизация подвала */
-
+/* === Footer === */
 .footer {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   padding: 40px;
   gap: 20px;
-  background-color: #000;
+  background: #000;
   color: #fff;
 }
 
 .footer__address {
-  justify-self: start;
   max-width: 200px;
   font-size: 1.4rem;
-  line-height: 1.5;
   text-align: left;
-}
-
-.footer__address a {
-  color: #fff;
-}
-
-.footer__menu {
-  justify-self: center;
 }
 
 .footer__menu-list {
@@ -275,7 +215,6 @@
 
 .footer__menu-link {
   font-size: 1.4rem;
-  line-height: 1.5;
   color: #fff;
   text-decoration: underline;
 }
@@ -285,13 +224,9 @@
 }
 
 .footer__social-list {
-  justify-self: end;
   display: flex;
   gap: 20px;
-}
-
-.footer__social-link {
-  display: block;
+  justify-self: end;
 }
 
 .footer__social-icon {
