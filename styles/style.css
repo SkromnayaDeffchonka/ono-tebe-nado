@@ -60,7 +60,6 @@
   font-weight: 700;
   line-height: 1.15;
   text-transform: uppercase;
-  /* Отступ для совпадения с фиолетовым эталоном */
   letter-spacing: 0.6em;
 }
 
@@ -77,7 +76,6 @@
 .aligned-text_right {
   display: block;
   text-align: right;
-  /* Компенсируем отступ последнего символа */
   margin-right: -0.6em;
 }
 
@@ -142,9 +140,17 @@
   background-position: center;
 }
 
-.card_type_film { background-image: url("../images/card-lot-01.jpg"); }
-.card_type_book { background-image: url("../images/card-lot-02.jpg"); }
-.card_type_picture { background-image: url("../images/card-lot-03.jpg"); }
+.card_type_film {
+  background-image: url("../images/card-lot-01.jpg");
+}
+
+.card_type_book {
+  background-image: url("../images/card-lot-02.jpg");
+}
+
+.card_type_picture {
+  background-image: url("../images/card-lot-03.jpg");
+}
 
 .card__title {
   position: relative;
@@ -167,7 +173,6 @@
 /* --- ОБ АУКЦИОНЕ --- */
 .about {
   display: grid;
-  /* Левая колонка теперь СТРОГО совпадает с шириной карточки */
   grid-template-columns: calc((100% - 50px) / 3) 1fr;
   gap: 25px;
   padding: 0 50px 180px;
@@ -186,6 +191,7 @@
 
 .about__logo-image {
   width: 148px;
+  height: auto;
 }
 
 .about__title {
