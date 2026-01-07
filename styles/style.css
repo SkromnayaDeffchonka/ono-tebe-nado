@@ -1,4 +1,4 @@
-/* Шапка */
+/* --- ШАПКА --- */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -32,7 +32,7 @@
   justify-self: end;
 }
 
-/* Обложка — Исправлено letter-spacing */
+/* --- ОБЛОЖКА --- */
 .cover {
   position: relative;
   background-image: url("../images/cover.jpg");
@@ -60,8 +60,8 @@
   font-weight: 700;
   line-height: 1.15;
   text-transform: uppercase;
-  /* Добавлен отступ между буквами для Pixel Perfect */
-  letter-spacing: 0.3em; 
+  /* Отступ для совпадения с фиолетовым эталоном */
+  letter-spacing: 0.6em;
 }
 
 .aligned-text {
@@ -77,8 +77,8 @@
 .aligned-text_right {
   display: block;
   text-align: right;
-  /* Убираем лишний отступ у последнего слова, чтобы не вылетало за край */
-  letter-spacing: 0.3em;
+  /* Компенсируем отступ последнего символа */
+  margin-right: -0.6em;
 }
 
 .cover__description {
@@ -108,7 +108,7 @@
   font-family: inherit;
 }
 
-/* Лоты */
+/* --- ЛОТЫ --- */
 .lots {
   padding: 179px 50px;
 }
@@ -164,23 +164,23 @@
   line-height: 1.2;
 }
 
-/* Об аукционе — Колонки исправлены под сетку лотов */
+/* --- ОБ АУКЦИОНЕ --- */
 .about {
   display: grid;
-  /* Левая колонка строго по ширине карточки, правая — всё остальное */
+  /* Левая колонка теперь СТРОГО совпадает с шириной карточки */
   grid-template-columns: calc((100% - 50px) / 3) 1fr;
   gap: 25px;
   padding: 0 50px 180px;
 }
 
 .about__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 240px;
   height: 240px;
   background-color: #000;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
 }
 
@@ -189,11 +189,10 @@
 }
 
 .about__title {
+  margin: 100px 0 27px;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  /* Выравнивание заголовка относительно центра круга */
-  margin: 100px 0 27px;
 }
 
 .about__text {
@@ -205,7 +204,7 @@
   margin-bottom: 24px;
 }
 
-/* Подвал */
+/* --- ПОДВАЛ --- */
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
