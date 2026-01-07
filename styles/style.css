@@ -1,4 +1,4 @@
-/* --- ШАПКА --- */
+/* Шапка */
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
@@ -32,7 +32,7 @@
   justify-self: end;
 }
 
-/* --- ОБЛОЖКА --- */
+/* Обложка — Исправление скролла и отступов букв */
 .cover {
   position: relative;
   background-image: url("../images/cover.jpg");
@@ -60,7 +60,7 @@
   font-weight: 700;
   line-height: 1.15;
   text-transform: uppercase;
-  letter-spacing: 0.6em;
+  letter-spacing: 0.3em;
 }
 
 .aligned-text {
@@ -76,7 +76,8 @@
 .aligned-text_right {
   display: block;
   text-align: right;
-  margin-right: -0.6em;
+  /* Убираем лишний отступ справа от последней буквы */
+  margin-right: -0.3em;
 }
 
 .cover__description {
@@ -106,7 +107,7 @@
   font-family: inherit;
 }
 
-/* --- ЛОТЫ --- */
+/* Лоты */
 .lots {
   padding: 179px 50px;
 }
@@ -170,7 +171,7 @@
   line-height: 1.2;
 }
 
-/* --- ОБ АУКЦИОНЕ --- */
+/* Об аукционе — Пиксель-в-пиксель сетка */
 .about {
   display: grid;
   grid-template-columns: calc((100% - 50px) / 3) 1fr;
@@ -186,12 +187,12 @@
   height: 240px;
   background-color: #000;
   border-radius: 50%;
+  /* Центрируем логотип внутри левой колонки */
   margin: 0 auto;
 }
 
 .about__logo-image {
   width: 148px;
-  height: auto;
 }
 
 .about__title {
@@ -210,7 +211,7 @@
   margin-bottom: 24px;
 }
 
-/* --- ПОДВАЛ --- */
+/* Подвал */
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
