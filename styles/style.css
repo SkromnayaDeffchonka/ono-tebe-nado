@@ -1,63 +1,17 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   width: 1100px;
   margin: 0 auto;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
   background-color: #fff;
   color: #000;
   -webkit-font-smoothing: antialiased;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-li {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .address {
   font-style: normal;
   font-size: 18px;
   line-height: 1.4;
-}
-
-/* DOTS IN MENU */
-.header__menu-list,
-.footer__menu-list {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  gap: 8px;
-  /* Используем gap для точности */
-}
-
-.header__menu-item:not(:last-child)::after,
-.footer__menu-list li:not(:last-child)::after {
-  content: '•';
-  margin-left: 8px;
+  font-family: 'Raleway';
 }
 
 /* HEADER */
@@ -66,6 +20,21 @@ img {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   padding: 92px 50px;
+}
+
+.header__menu-list {
+  display: flex;
+  gap: 32px;
+}
+
+.header__menu-item {
+  position: relative;
+}
+
+.header__menu-item:not(:last-child)::after {
+  content: '•';
+  position: absolute;
+  right: -20px;
 }
 
 .header__logo-image {
@@ -116,16 +85,16 @@ img {
 .aligned-text_center {
   text-align: center;
   letter-spacing: 0.3em;
-  margin-left: 0.15em;
-  /* Компенсация для центрирования */
+  padding-left: 0.3em;
+  /* Компенсация letter-spacing для центра */
 }
 
 .aligned-text_right {
   text-align: right;
 }
 
-/* Убираем лишний спейсинг у последней буквы, чтобы текст не уезжал */
-.letter-spacing-none {
+/* Убираем отступ у последней буквы каждой строки заголовка */
+.cover__title span span {
   letter-spacing: 0;
 }
 
@@ -133,7 +102,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* Описание обычно справа или по центру */
   gap: 78px;
   z-index: 1;
   color: #fff;
@@ -150,7 +118,6 @@ img {
   border: 1px solid #fff;
   color: #fff;
   padding: 12px 31px;
-  font-family: inherit;
   font-size: 22px;
   cursor: pointer;
   text-transform: uppercase;
@@ -172,18 +139,11 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  list-style: none;
 }
 
 .lots__card-list-item {
-  flex-grow: 1;
   width: 334px;
   min-height: 450px;
-}
-
-.card-link {
-  display: block;
-  height: 100%;
 }
 
 .card {
@@ -198,7 +158,6 @@ img {
   background-position: center;
 }
 
-/* Фон для разных типов карточек */
 .card_type_film {
   background-image: url(../images/card-lot-01.jpg);
 }
@@ -244,8 +203,7 @@ img {
 .about__column_type_logo {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 35px;
+  align-items: center;
 }
 
 .about__logo {
@@ -282,15 +240,15 @@ img {
   padding: 180px 50px 90px;
 }
 
-.footer__address {
-  justify-self: start;
+.footer__menu-list {
+  display: flex;
+  gap: 32px;
 }
 
 .footer__social-list {
   display: flex;
   gap: 16px;
-  justify-content: flex-end;
-  list-style: none;
+  justify-self: end;
 }
 
 .footer__social-link {
